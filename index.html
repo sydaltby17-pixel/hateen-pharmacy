@@ -1,0 +1,266 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>صيدلية حطين</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f0f8f5;
+  color: #183b35;
+}
+
+header {
+  background: linear-gradient(135deg, #056653, #10a582);
+  color: white;
+  text-align: center;
+  padding: 28px 12px;
+}
+
+.logo { font-size: 55px; }
+
+header h1 { margin: 5px; }
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  background: #064e42;
+  padding: 13px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  background: #d9f5e9;
+  text-align: center;
+  padding: 30px 15px;
+}
+
+.hero h2 { color: #087f68; }
+
+.container {
+  max-width: 850px;
+  margin: auto;
+  padding: 20px 14px;
+}
+
+.search {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #b9d8ce;
+  border-radius: 12px;
+  font-size: 16px;
+  margin: 15px 0;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+}
+
+.product {
+  background: white;
+  text-align: center;
+  padding: 16px 10px;
+  border-radius: 15px;
+  box-shadow: 0 3px 12px #00000010;
+}
+
+.product .emoji { font-size: 38px; }
+
+.product h3 { color: #087f68; }
+
+.product p {
+  font-size: 14px;
+  color: #60756d;
+}
+
+.btn {
+  display: inline-block;
+  background: #087f68;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.whatsapp { background: #168b50; }
+
+.contact {
+  background: white;
+  text-align: center;
+  padding: 22px 12px;
+  border-radius: 15px;
+  margin-top: 28px;
+}
+
+h2 { text-align: center; }
+
+footer {
+  background: #064e42;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 25px;
+}
+
+@media (max-width: 350px) {
+  .products { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">💊</div>
+  <h1>صيدلية حطين</h1>
+  <p>صحتكم تهمنا 💚</p>
+  <p>رعاية صحية وخدمة مميزة</p>
+</header>
+
+<nav>
+  <a href="#home">الرئيسية</a>
+  <a href="#products">الأقسام</a>
+  <a href="#contact">تواصل معنا</a>
+</nav>
+
+<section class="hero" id="home">
+  <h2>أهلًا بكم في صيدلية حطين</h2>
+  <p>نسعد بخدمتكم والإجابة عن استفساراتكم حول المنتجات.</p>
+  <a href="#products" class="btn">تصفح الأقسام</a>
+  <a href="https://wa.me/967774349443?text=السلام%20عليكم،%20أريد%20الاستفسار%20عن%20منتج%20في%20صيدلية%20حطين"
+     class="btn whatsapp" target="_blank" rel="noopener noreferrer">
+    💬 واتساب الصيدلية
+  </a>
+</section>
+
+<main class="container">
+
+<section id="products">
+  <h2>أقسام الصيدلية</h2>
+  <p style="text-align:center">ابحث عن القسم الذي تريده</p>
+
+  <input class="search" id="search"
+         type="search" placeholder="🔍 ابحث عن قسم..."
+         aria-label="البحث عن قسم">
+
+  <div class="products" id="productList">
+
+    <div class="product" data-name="الأدوية">
+      <div class="emoji">💊</div>
+      <h3>الأدوية</h3>
+      <p>استفسر عن توفر الأدوية.</p>
+      <a class="btn" href="https://wa.me/967774349443?text=أريد%20الاستفسار%20عن%20الأدوية"
+         target="_blank" rel="noopener noreferrer">استفسر</a>
+    </div>
+
+    <div class="product" data-name="الفيتامينات">
+      <div class="emoji">🧴</div>
+      <h3>الفيتامينات</h3>
+      <p>الفيتامينات والمكملات.</p>
+      <a class="btn" href="https://wa.me/967774349443?text=أريد%20الاستفسار%20عن%20الفيتامينات"
+         target="_blank" rel="noopener noreferrer">استفسر</a>
+    </div>
+
+    <div class="product" data-name="العناية بالبشرة">
+      <div class="emoji">🧴</div>
+      <h3>العناية بالبشرة</h3>
+      <p>منتجات العناية الشخصية.</p>
+      <a class="btn" href="https://wa.me/967774349443?text=أريد%20الاستفسار%20عن%20منتجات%20البشرة"
+         target="_blank" rel="noopener noreferrer">استفسر</a>
+    </div>
+
+    <div class="product" data-name="مستلزمات الأطفال">
+      <div class="emoji">🍼</div>
+      <h3>مستلزمات الأطفال</h3>
+      <p>منتجات ومستلزمات الأطفال.</p>
+      <a class="btn" href="https://wa.me/967774349443?text=أريد%20الاستفسار%20عن%20مستلزمات%20الأطفال"
+         target="_blank" rel="noopener noreferrer">استفسر</a>
+    </div>
+
+    <div class="product" data-name="الإسعافات الأولية">
+      <div class="emoji">🩹</div>
+      <h3>الإسعافات الأولية</h3>
+      <p>مستلزمات الإسعافات الأولية.</p>
+      <a class="btn" href="https://wa.me/967774349443?text=أريد%20الاستفسار%20عن%20الإسعافات%20الأولية"
+         target="_blank" rel="noopener noreferrer">استفسر</a>
+    </div>
+
+    <div class="product" data-name="الأجهزة الطبية">
+      <div class="emoji">🩺</div>
+      <h3>الأجهزة الطبية</h3>
+      <p>استفسر عن الأجهزة المتوفرة.</p>
+      <a class="btn" href="https://wa.me/967774349443?text=أريد%20الاستفسار%20عن%20الأجهزة%20الطبية"
+         target="_blank" rel="noopener noreferrer">استفسر</a>
+    </div>
+
+  </div>
+
+  <p id="noResults" hidden style="text-align:center">
+    لا توجد أقسام مطابقة للبحث.
+  </p>
+</section>
+
+<section id="contact" class="contact">
+  <h2>تواصل مع صيدلية حطين</h2>
+  <p>💚 يسعدنا استقبال استفساراتكم.</p>
+  <p>📱 رقم واتساب:</p>
+  <p dir="ltr">+967 774 349 443</p>
+  <a class="btn whatsapp"
+     href="https://wa.me/967774349443?text=السلام%20عليكم"
+     target="_blank" rel="noopener noreferrer">
+    مراسلة الصيدلية
+  </a>
+  <p>📍 العنوان:صنعاء المطار بعد مثلث المطار هنا</p>
+</section>
+
+</main>
+
+<footer>
+  <p>💊 صيدلية حطين</p>
+  <p>صحتكم أولويتنا</p>
+  <p>© 2026 جميع الحقوق محفوظة</p>
+</footer>
+
+<script>
+const search = document.getElementById("search");
+const products = document.querySelectorAll(".product");
+const noResults = document.getElementById("noResults");
+
+search.addEventListener("input", function() {
+  const query = search.value.trim().toLowerCase();
+  let count = 0;
+
+  products.forEach(function(product) {
+    const name = product.dataset.name.toLowerCase();
+    const match = name.includes(query);
+
+    product.style.display = match ? "" : "none";
+
+    if (match) count++;
+  });
+
+  noResults.hidden = count > 0;
+});
+</script>
+
+</body>
+</html>
